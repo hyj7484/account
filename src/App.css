@@ -1,0 +1,215 @@
+/* tag init */
+a{
+  text-decoration: none;
+  color : black;
+}
+ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+table{
+  border-collapse : collapse;
+}
+td{
+  white-space: pre-line;
+}
+/* button effect */
+.button {
+	position: relative;
+  left: 50%;
+  transform : translateX(-50%);
+}
+.button,
+.button::before,
+.button::after {
+	box-sizing: border-box;
+	transition: all .7s;
+}
+.button::before,
+.button::after {
+  position: absolute;
+	left: 0;
+	width: 100%;
+	height: 50%;
+  box-sizing: border-box;
+  content: "";
+}
+.button::after {
+	bottom: 0;
+}
+/* button hover set */
+.button:hover::before,
+.button:hover::after {
+	height: 0;
+	background-color: #59b1eb;
+}
+/* button hover color set */
+.button-pupple:hover::before,
+.button-pupple:hover::after{
+  background-color: #8c7ae6;
+}
+.button-yellow:hover::before,
+.button-yellow:hover::after{
+  background-color: #fbc531;
+}
+.button-sky:hover::before,
+.button-sky:hover::after{
+  background-color: #00a8ff;
+}
+.button-red:hover::before,
+.button-red:hover::after{
+  background-color: #e84118;
+}
+.button-orange:hover::before,
+.button-orange:hover::after{
+  background-color: #f0932b;
+}
+.button-pink:hover::before,
+.button-pink:hover::after{
+  background-color: #e056fd;
+}
+.button-breeze:hover::before,
+.button-breeze:hover::after{
+  background-color: #dff9fb;
+}
+/* set */
+.center{
+  margin : 0 auto;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.border-blk{
+  border : solid 1px black;
+}
+.mainCon{
+  width: 80%;
+  margin-top : 20px;
+  padding : 5%;
+}
+.margin-10{
+  margin : 10px;
+}
+
+/*
+  template - Home
+*/
+
+
+/*
+  component - Calendar
+*/
+.Calendar{
+
+}
+.Calendar-table{
+  width: 100%;
+  height: 100%;
+}
+.Calendar-thead{
+  height : 60px;
+}
+.Calendar-week>td{
+  border : 1px solid black;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+
+/*
+  template - SelectDateMenu
+*/
+.button{
+  width: 50%;
+  line-height: 50px;
+}
+.SelectDateMenu{
+
+}
+
+/*
+  template - account
+*/
+.account-list{
+  width: 100%;
+  height: 30px;
+}
+
+.account-list>ul>li{
+  line-height: 10px;
+  /* width: 60px; */
+  float: right;
+  padding: 10px 10px;
+  margin: 0 5px;
+}
+.account-list-today{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0px;
+}
+.account-list-today::before,
+.account-list-today::after{
+  transition: all .6s;
+}
+.account-list-today::before,
+.account-list-today::after{
+  position: absolute;
+  box-sizing: border-box;
+  top : 0;
+  width: 50%;
+  height: 100%;
+  content : "";
+}
+.account-list-today::before{
+  left : 0;
+}
+.account-list-today::after{
+  right : 0;
+}
+.account-list-today:hover{
+  margin-top : -2px;
+}
+.account-list-today:hover::before,
+.account-list-today:hover::after{
+  width: 0;
+  background-color: #dfe4ea;
+}
+
+.account-header{
+  display: flex;
+  padding: 20px 0px;
+}
+.account-header-left,
+.account-header-center,
+.account-header-right{
+  line-height: 30px;
+}
+
+.account-header-left,
+.account-header-right{
+  flex : 1;
+  cursor: pointer;
+  transition: all .5s;
+}
+.account-header-left:active,
+.account-header-right:active{
+  background-color: #aaa69d;
+}
+
+.account-header-center{
+  flex : 10;
+}
+.account-table{
+  width: 100%;
+}
+
+.account-table-head{
+
+}
+.account-table-body>tr>td{
+  border : 1px solid black;
+}
